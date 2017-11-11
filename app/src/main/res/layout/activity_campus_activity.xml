@@ -35,6 +35,7 @@
             android:background="@color/colorPrimary"
             android:text="Old Main"
             android:textColor="@android:color/background_light"
+            android:onClick="openActivity"
             />
 
         <Button
