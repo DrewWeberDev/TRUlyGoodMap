@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">TRUly Good Map</string>
+    <string name="title_activity_campus_activity">campus_activity</string>
 </resources>
