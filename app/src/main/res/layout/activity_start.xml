@@ -1,25 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="ca.tru.trulygoodmap.startActivity">
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="311dp"
-        android:layout_height="215dp"
-        app:srcCompat="@drawable/tru_logo"
-        tools:layout_editor_absoluteY="5dp"
-        android:layout_marginLeft="37dp"
-        app:layout_constraintLeft_toLeftOf="parent" />
+    tools:context="ca.tru.trulygoodmap.startActivity"
+    tools:layout_editor_absoluteY="25dp"
+    tools:layout_editor_absoluteX="0dp">
 
     <ProgressBar
         android:id="@+id/loadingProgress"
         style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="168dp"
-        tools:layout_editor_absoluteY="304dp" />
-</android.support.constraint.ConstraintLayout>
+        tools:layout_editor_absoluteY="233dp"
+        tools:layout_editor_absoluteX="156dp"
+        android:layout_below="@+id/tru_imageView"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:id="@+id/tru_imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        app:srcCompat="@drawable/tru_lgo" />
+
+</RelativeLayout>
