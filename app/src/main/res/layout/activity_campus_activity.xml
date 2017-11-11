@@ -11,23 +11,99 @@
         android:layout_height="wrap_content"
         android:theme="@style/AppTheme.AppBarOverlay">
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
-
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_campus_activity" />
+    <include layout="@layout/content_campus_activity"
+        android:id="@+id/include" />
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/oldMainButton"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="49dp"
+            android:layout_weight="0.09"
+            app:srcCompat="@mipmap/ic_launcher" />
+
+        <Button
+            android:id="@+id/oldMainButton"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/CACButton"
+            android:layout_alignStart="@+id/CACButton"
+            android:layout_marginBottom="21dp"
+            android:layout_weight="0.09"
+            android:background="@color/colorPrimary"
+            android:text="Old Main"
+            android:textColor="@android:color/background_light" />
+
+        <Button
+            android:id="@+id/CACButton"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/IBButton"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="28dp"
+            android:layout_weight="0.09"
+            android:background="@color/colorPrimary"
+            android:text="Campus Activity Center"
+            android:textColor="@android:color/background_light" />
+
+        <Button
+            android:id="@+id/IBButton"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/CACButton"
+            android:layout_centerVertical="true"
+            android:layout_weight="0.09"
+            android:background="@color/colorPrimary"
+            android:text="International Building"
+            android:textColor="@android:color/background_light" />
+
+        <Button
+            android:id="@+id/HOLButton"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/IBButton"
+            android:layout_below="@+id/IBButton"
+            android:layout_marginTop="26dp"
+            android:layout_weight="0.09"
+            android:background="@color/colorPrimary"
+            android:text="House Of Learning"
+            android:textColor="@android:color/background_light" />
+
+        <Button
+            android:id="@+id/CTButton"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.09"
+            android:background="@color/colorPrimary"
+            android:text="Clock Tower"
+            android:textColor="@android:color/background_light"
+            android:layout_below="@+id/HOLButton"
+            android:layout_alignStart="@+id/HOLButton"
+            android:layout_marginTop="17dp" />
+
+        <Button
+            android:id="@+id/SciButton"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/CTButton"
+            android:layout_below="@+id/CTButton"
+            android:layout_marginTop="26dp"
+            android:layout_weight="0.09"
+            android:background="@color/colorPrimary"
+            android:text="Science"
+            android:textColor="@android:color/background_light" />
+    </RelativeLayout>
 
 </android.support.design.widget.CoordinatorLayout>
