@@ -20,10 +20,6 @@
             android:name=".selectionActivity"
             android:label="@string/title_activity_selection"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".OldMainActivity"
-            android:label="@string/title_activity_old_main"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
