@@ -1,6 +1,7 @@
 package ca.tru.trulygoodmap;
 
 
+import android.location.Location;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
@@ -9,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapsInitializer;
@@ -43,17 +45,13 @@ public class OldMainMap extends Fragment {
         }
 
         googleMap = mMapView.getMap();
-        // latitude and longitude
-        double latitude = 13.0294278;
-        double longitude =80.24667829999999;
 
-        // Changing marker icon
-        // marker.icon(BitmapDescriptorFactory
-        // .defaultMarker(BitmapDescriptorFactory.HUE_ROSE));
+        Location myLocation = googleMap.getMyLocation();
 
-
+        LatLng myLatLng = new LatLng(myLocation.getLatitude(),
+                myLocation.getLongitude());
         CameraPosition cameraPosition = new CameraPosition.Builder()
-                .target(new LatLng(13.0294278, 80.24667829999999)).zoom(12).build();
+                .target(myLatLng).zoom(12).build();
         googleMap.animateCamera(CameraUpdateFactory
                 .newCameraPosition(cameraPosition));
 
