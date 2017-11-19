@@ -15,6 +15,7 @@
         android:layout_height="wrap_content"
         tools:layout_editor_absoluteY="233dp"
         tools:layout_editor_absoluteX="156dp"
+        android:layout_marginTop="94dp"
         android:layout_below="@+id/tru_imageView"
         android:layout_centerHorizontal="true" />
 
