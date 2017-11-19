@@ -14,14 +14,6 @@ public class startActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
 
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                Intent i = new Intent(startActivity.this, campus_activity.class);
-                startActivity(i);
-                finish();
-            }
-        }, 2500);
 
     }
 }
