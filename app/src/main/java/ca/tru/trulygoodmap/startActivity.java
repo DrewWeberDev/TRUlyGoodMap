@@ -17,7 +17,7 @@ public class startActivity extends Activity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent i = new Intent(startActivity.this, campus_activity.class);
+                Intent i = new Intent(startActivity.this, selectionActivity.class);
                 startActivity(i);
                 finish();
             }
